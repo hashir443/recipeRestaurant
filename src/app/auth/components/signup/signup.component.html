@@ -1,0 +1,18 @@
+<form [formGroup]="registerForm" id="registerForm" (ngSubmit)="submitModalData(registerForm)">
+    <input type="text" formControlName="username" placeholder="User Name">
+    <input type="text" formControlName="email" placeholder="Email">
+    <input type="password" formControlName="password" placeholder="Password">
+    <div class="form-group my-3 px-2 inter-jameel-noori">
+        <label>Sign in as:</label><br>
+        <!-- <input formControlName="userRole" name="userRole" type="radio" id="Single" name="userRole" [value]="1">
+        <label class="ms-2" for="1">Admin</label>
+        <br> -->
+        <input formControlName="userRole" name="userRole" type="radio" id="NotSingle" name="userRole" [value]="'ResOwner'">
+        <label class="ms-2" for="2">Restaurant Owner</label>
+        <br>
+        <input formControlName="userRole" name="userRole" type="radio" id="NotSingle" name="userRole" [value]="'Customer'">
+        <label class="ms-2" for="3">Customer</label>
+    </div>
+    <button type="submit" form="registerForm" class="btn modal-submit-btns">Create Account</button>
+    <button routerLink="/auth/signup" class="btn modal-submit-btns">Register</button>
+</form>

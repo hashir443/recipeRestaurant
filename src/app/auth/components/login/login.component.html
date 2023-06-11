@@ -1,0 +1,6 @@
+<form [formGroup]="loginForm" id="loginForm" (ngSubmit)="submitModalData(loginForm)">
+    <input type="text" formControlName="Email" placeholder="Email">
+    <input type="password" formControlName="Password" placeholder="Password">
+    <button type="submit" form="loginForm" class="btn modal-submit-btns">Login</button>
+    <button routerLink="/auth/signup" class="btn modal-submit-btns">Register</button>
+</form>
